@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Once a Once</title>
+    <link rel="stylesheet" href="LoginStyle.css">
+   
+</head>
+<body>
+    <header>
+        <div class="top-button">
+                
+                <a href="Signup.html" button class="top-button button1" onclick="alert('Proceeding to Sign Up')">Sign Up</button></a>
+                            
+                <a href="help.html" button class="top-button button2" onclick="alert('Going to Help Centre')">Help</button></a>
+                              
+                <a href="Support.html" button class="top-button button3" onclick="alert('Support Us by doing these:')">Support</button></a>
+                               
+               <a href="Aboutus.html" button class="top-button button4" onclick="alert('Proceeding to About Us')">About Us</button></a>
+
+            <a href="#"><Signup class="html"></Signup></a>
+              
+        <a href="#"><Help class="html"></Help></a>
+
+    <div class="login-container">
+        <h2>My Bubbles</h2>
+        
+        <form action="Home.html" method="post">
+            <i class="fa-solid fa-user"></i><input type="text" name="username" placeholder="Username" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <input type="submit" value="Login">
+            <form action="Home.html">
+            
+        </form>
+        <script>
+            
+            function login() {
+                var username = document.getElementById("username").value;
+                var password = document.getElementById("password").value;
+                
+            
+                if (username === "user" && password === "password") {
+                    alert("Login successful!");
+                   
+                    
+            
+
+                } else {
+                    alert("Invalid username or password!");
+                }
+            }
+        
+           
+            function handleKeyPress(event) {
+                if (event.keyCode === 13) {
+               
+                    login();
+                }
+            }
+        
+            
+            document.getElementById("password").addEventListener("keypress", handleKeyPress);
+        </script>
+        <p>Don't have an account? <a href="#" class="signup-link">Sign up</a></p>
+        <p> Sign up or Sign in using the platforms below.</p>
+       
+        <div class="logo-container">
+           <a href="https://www.facebook.com"><img src="fblogo.png" alt="Facebook"></a>
+           <a href="https://www.messengerx.com"><img src="twitterx logo.webp" alt="Twitter"></a>
+           <a href="https://www.accounts.google.com"><img src="googlelogo.png" alt="Google"></a>
+           <a href="https://www.instagram.com"><img src="iglogo.webp" alt="Google"></a>
+        </div>
+    </div>  <script>
+     
+        var passwordInput = document.getElementById("password");
+
+       
+        passwordInput.addEventListener("keyup", function(event) {
+           
+            if (event.keyCode === 13) {
+                
+                event.preventDefault();
+                
+                login();
+            }
+        });
+
+        // Function to perform login action
+        function login() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+            
+            alert("Username: " + username + "\nPassword: " + password);
+        }
+        
+    </script>
+   
+</body>
+</html>
