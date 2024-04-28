@@ -6,95 +6,61 @@
     <title>Aniworld</title>
     <link rel="stylesheet" href="LoginStyle.css">
     <link rel="icon" type="image/png" href="favicon.png">
-   
 </head>
 <body>
     <header>
-        <div class="top-button">
-                
-                <a href="Signup.html" button class="top-button button1" onclick="alert('Proceeding to Sign Up')">Sign Up</button></a>
-                            
-                <a href="Help.html" button class="top-button button2" onclick="alert('Going to Help Centre')">Help</button></a>
-                              
-                <a href="Support.html" button class="top-button button3" onclick="alert('Support Us by doing these:')">Support</button></a>
-                               
-               <a href="Aboutus.html" button class="top-button button4" onclick="alert('Proceeding to About Us')">About Us</button></a>
-
-            <a href="Signup.html"><Signup class="html"></Signup></a>
-              
-        <a href="#"><Help class="html"></Help></a>
+        <div class="top-buttons">
+            <!-- Each button should be within its own <a> tag -->
+            <a href="Signup.html" class="top-button button1" onclick="alert('Proceeding to Sign Up')">Sign Up</a>
+            <a href="Help.html" class="top-button button2" onclick="alert('Going to Help Centre')">Help</a>
+            <a href="Support.html" class="top-button button3" onclick="alert('Support Us by doing these:')">Support</a>
+            <a href="Aboutus.html" class="top-button button4" onclick="alert('Proceeding to About Us')">About Us</a>
+        </div>
+    </header>
 
     <div class="login-container">
         <h2>My Aniworld</h2>
         <form action="webp.html" method="post">
-            <i class="fa-solid fa-user"></i><input type="text" name="username" placeholder="Username" required>
-            <input type="password" name="password" placeholder="Password" required>
+            <i class="fa-solid fa-user"></i><input type="text" id="username" name="username" placeholder="Username" required>
+            <input type="password" id="password" name="password" placeholder="Password" required>
             <input type="submit" value="Login">
         </form>
-        <script>
-            
-            function login() {
-                var username = document.getElementById("username").value;
-                var password = document.getElementById("password").value;
-                
-            
-                if (username === "user" && password === "password") {
-                    alert("Login successful!");
-                    window.location.assign("webp.html");
-                     
-                   
-                    
-            
-
-                } else {
-                    alert("Invalid username or password!");
-                }
-            }
-        
-           
-            function handleKeyPress(event) {
-                if (event.keyCode === 13) {
-               
-                    login();
-                }
-            }
-        
-            
-            document.getElementById("password").addEventListener("keypress", handleKeyPress);
-        </script>
         <p>Don't have an account? <a href="Signup.html" class="signup-link">Sign up</a></p>
-        <p> Sign up or Sign in using the platforms below.</p>
+        <p>Sign up or Sign in using the platforms below.</p>
        
         <div class="logo-container">
            <a href="https://www.facebook.com"><img src="fblogo.png" alt="Facebook"></a>
            <a href="https://www.messengerx.com"><img src="twitterx logo.webp" alt="Twitter"></a>
            <a href="https://www.accounts.google.com"><img src="googlelogo.png" alt="Google"></a>
-           <a href="https://www.instagram.com"><img src="iglogo.webp" alt="Google"></a>
+           <a href="https://www.instagram.com"><img src="iglogo.webp" alt="Instagram"></a>
         </div>
-    </div>  <script>
-     
-        var passwordInput = document.getElementById("password");
+    </div>
 
-       
-        passwordInput.addEventListener("keyup", function(event) {
-           
-            if (event.keyCode === 13) {
-                
-                event.preventDefault();
-                
-                login();
-            }
-        });
-
-       
+    <script>
         function login() {
             var username = document.getElementById("username").value;
             var password = document.getElementById("password").value;
             
-            alert("Username: " + username + "\nPassword: " + password);
+            
+            if (username === "user" && password === "password") {
+                alert("Login successful!");
+                window.location.href = "webp.html"; 
+            } else {
+                alert("Invalid username or password!");
+            }
         }
+
         
+        document.getElementById("password").addEventListener("keypress", function(event) {
+            if (event.keyCode === 13) { 
+                event.preventDefault();
+                login(); 
+            }
+        });
     </script>
-   
 </body>
 </html>
+                     
+                   
+                    
+            
