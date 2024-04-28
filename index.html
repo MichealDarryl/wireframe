@@ -20,7 +20,7 @@
 
     <div class="login-container">
         <h2>My Aniworld</h2>
-        <form action="webpage.html" method="post">
+        <form action="webpage.html" method="post"> 
             <i class="fa-solid fa-user"></i><input type="text" id="username" name="username" placeholder="Username" required>
             <input type="password" id="password" name="password" placeholder="Password" required>
             <input type="submit" value="Login">
@@ -41,25 +41,26 @@
             var username = document.getElementById("username").value;
             var password = document.getElementById("password").value;
             
-            
+            // You can handle the login process here
             if (username === "user" && password === "password") {
                 alert("Login successful!");
-                window.location.href = "webp.html"; 
+                window.location.href = "webp.html"; // Redirect to webp.html upon successful login
             } else {
                 alert("Invalid username or password!");
             }
         }
 
-        
+        // Handle key press event for Enter key
         document.getElementById("password").addEventListener("keypress", function(event) {
-            if (event.keyCode === 13) { 
+            if (event.keyCode === 13) { // 13 is the key code for Enter key
                 event.preventDefault();
-                login(); 
+                login(); // Call the login function when Enter key is pressed
             }
         });
     </script>
 </body>
 </html>
+
                      
                    
                     
